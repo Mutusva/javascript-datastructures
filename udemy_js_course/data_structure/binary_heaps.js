@@ -7,7 +7,7 @@ class MaxBinaryHeap {
 
   insert(val) {
     this.values.push(val);
-    MaxHeapify();
+    this.MaxHeapify();
     return this;
   }
 
