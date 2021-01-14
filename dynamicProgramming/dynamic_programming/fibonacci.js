@@ -13,11 +13,12 @@ var fib = (n, memo = {}) => {
 var fib_bottom_up = (n) => {
   if (n <= 2) return 1;
 
-  var compute = [0, 1, 1];
+  //var table = Array(n + 1).fill(0);
+  var table = [0, 1, 1];
   for (let i = 3; i <= n; i++) {
-    compute[i] = compute[i - 1] + compute[i - 2];
+    table[i] = table[i - 1] + table[i - 2];
   }
-  return compute[n];
+  return table[n];
 };
 
 console.log(fib(8));
