@@ -13,11 +13,10 @@ function maxTrailing(levels) {
 }
 
 function maxTrailing02(levels) {
-  // Write your code here
   let i = 0;
   let j = 1;
   let maxRecord = -1;
-  while (i <= j && j < levels.length) {
+  while (j < levels.length) {
     if (levels[j] > levels[i]) {
       maxRecord = Math.max(maxRecord, levels[j] - levels[i]);
       j++;
@@ -30,4 +29,4 @@ function maxTrailing02(levels) {
   return maxRecord;
 }
 
-console.log(maxTrailing02([4, 3, 7, 1, 8]));
+console.log(maxTrailing02([4, 3, 7, 1, 8, 11, 25, 100, 25, 6]));
